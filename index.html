@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Scheduler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background: #f8f9fa;
+        }
+
+        form {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            max-width: 500px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        label,
+        input,
+        select,
+        button {
+            display: block !important;
+            width: 100% !important;
+            margin-bottom: 1rem !important;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        input,
+        select {
+            padding: 0.6rem;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            background: #007BFF;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            width: auto;
+            /* shrink button so it doesn't stretch full width */
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Youtube Scheduler</h1>
+    <form id="schedulerForm">
+        <!-- Step 1: Channel or Playlist -->
+        <!-- <div>
+            <label for="sourceType">Choose Source:</label>
+            <select id="sourceType"
+                    name="sourceType"
+                    required>
+                <option value="channel">Channel ID</option>
+                <option value="playlist">Playlist ID</option>
+            </select>
+        </div> -->
+        <div>
+            <label for="sourceId">Playlist ID:</label>
+            <input type="text"
+                   id="sourceId"
+                   name="sourceId"
+                   placeholder="e.g. PLfFNYT1NiTNQUoQzrrGFFLL0DWBSLglaH"
+                   required />
+        </div>
+        <div class="form-group">
+            <label for="episodesPerDay">Episodes per Day:</label>
+            <input type="number"
+                   id="episodesPerDay"
+                   name="episodesPerDay"
+                   min="1"
+                   max="24"
+                   value="1"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="startTime">Start Time:</label>
+            <input type="time"
+                   id="startTime"
+                   name="startTime"
+                   value="09:00"
+                   required />
+        </div>
+
+        <!-- Step 3: Duration -->
+        <div class="form-group">
+            <label for="startDate">Schedule Start Date:</label>
+            <input type="date"
+                   id="startDate"
+                   name="startDate"
+                   required />
+        </div>
+
+        <button type="submit">Generate Schedule</button>
+    </form>
+
+</body>
+<script src="./renderer.js"></script>
+
+</html>

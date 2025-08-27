@@ -1,0 +1,32 @@
+{
+  "name": "youtube-scheduler",
+  "version": "1.0.0",
+  "description": "quick and simple app to schedule youtube videos on your calendar",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rangedsp/youtube-scheduler.git"
+  },
+  "keywords": [
+    "youtube",
+    "playlist",
+    "scheduler"
+  ],
+  "author": "Jonny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rangedsp/youtube-scheduler/issues"
+  },
+  "homepage": "https://github.com/rangedsp/youtube-scheduler#readme",
+  "dependencies": {
+    "ics": "^3.8.1",
+    "youtube-search-api": "^2.0.1"
+  },
+  "devDependencies": {
+    "electron": "^37.3.1"
+  }
+}
