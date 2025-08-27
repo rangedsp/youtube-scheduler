@@ -28,3 +28,11 @@ Stretch goal:
 > **couple of hours side project**
 
 Painted myself into a corner, sorry dude. Gonna be honest here, I'm thinking a day or two now
+
+## Changelog
+
+### v0.1
+
+- Made a simple UI in electron, this should allow for easy packaging for users with little technical background to get all the libraries working
+- Pair coded with gpt5, came up with something simple that creates ics files
+- KNOWN BUG: All videos are scheduled for the same day, that's pretty dumb, need to space it out
